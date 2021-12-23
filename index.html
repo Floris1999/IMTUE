@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Accessible Form Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+
+<script src="main.js"></script>
+
+<body>
+    <nav>
+
+    </nav>
+    <article id="content">
+        <div id="content-wrapper">
+            <section>
+                <p>Bel of mail ons voor geheel vrijblijvende informatie kunt u ons mailen, bellen of onderstaand
+                    boekings
+                    formulier toesturen. </p>
+                <hr>
+                </hr>
+            </section>
+
+            <section>
+                <h2>Reservering/Info La Mirande</h2>
+                <form action="#" name="myForm" onsubmit="return validateForm()" method="get">
+                    <p><label for="fname">Voornaam van de gast:<span class="reqField">*</span><span
+                                class="element-invisible" id="fnameErrorHidden"></span></label><br />
+                        <input id="fname" type="text" name="textfield" />
+                        <span class="errorMsg" id="fnameError"></span>
+
+                    <p><label for="insertion">Tussenvoegsel van de gast: (optioneel)<span class="element-invisible"
+                                id="insertionErrorHidden"></span></label><br />
+                        <input id="insertion" type="text" name="textfield" />
+                        <span class="errorMsg" id="insertionError"></span>
+                    </p>
+                    <p><label for="lname">Achternaam van de gast:<span class="reqField">*</span><span class="element-invisible"
+                                id="lnameErrorHidden"></span></label><br />
+                        <input id="lname" type="text" name="textfield" />
+                        <span class="errorMsg" id="lnameError"></span>
+                    </p>
+
+                    <fieldset>
+                        <legend id="genderLegend">Geslacht van de gast tbv aanhef (man/vrouw/anders):<span class="reqField">*</span><span class="errorMsg"
+                                id="genderLegendError"></span></legend>
+                        <input id="male" type="radio" name="gender" value="male" />
+                        <label for="male">Man</label><br>
+                        <input id="female" type="radio" name="gender" value="female" />
+                        <label for="female">Vrouw</label><br>
+                        <input id="else" type="radio" name="gender" value="else" />
+                        <label for="else">Anders</label><br>
+                    </fieldset>
+
+                    <p><label for="strName">Straat:<span class="reqField">*</span><span class="element-invisible"
+                                id="strNameErrorHidden"></span></label><br />
+                        <input id="strName" type="text" name="textfield" />
+                        <span class="errorMsg" id="strNameError"></span>
+                    </p>
+
+                    <p><label for="strNumb">Huisnummer:<span class="reqField">*</span><span class="element-invisible"
+                                id="strNumbErrorHidden"></span></label><br />
+                        <input id="strNumb" type="text" name="textfield" />
+                        <span class="errorMsg" id="strNumbError"></span>
+                    </p>
+
+                    <p><label for="postalCode">Postcode:<span class="reqField">*</span><span class="element-invisible"
+                                id="postalCodeErrorHidden"></span></label><br />
+                        <input id="postalCode" type="text" name="textfield" />
+                        <span class="errorMsg" id="postalCodeError"></span>
+                    </p>
+
+                    <p><label for="city">Stad:<span class="reqField">*</span><span class="element-invisible"
+                                id="cityErrorHidden"></span></label><br />
+                        <input id="city" type="text" name="textfield" />
+                        <span class="errorMsg" id="cityError"></span>
+                    </p>
+
+                    <p><label for="phone">Telefoonnummer van de gast:<span class="reqField">*</span><span
+                                class="element-invisible" id="phoneErrorHidden"></span></label><br />
+                        <input id="phone" type="text" name="textfield" />
+                        <span class="errorMsg" id="phoneError"></span>
+                    </p>
+
+                    <p><label for="email">Emailadres van de gast:<span class="reqField">*</span><span
+                                class="element-invisible" id="emailErrorHidden"></span></label><br />
+                        <input id="email" type="text" name="textfield" />
+                        <span class="errorMsg" id="emailError"></span>
+                    </p>
+
+                    <p><label for="adult">Aantal volwassenen in het gezelschap:<span class="reqField">*</span><span
+                                class="element-invisible" id="adultErrorHidden"></span></label><br />
+                        <input id="adult" type="number" name="textfield" />
+                        <span class="errorMsg" id="adultError"></span>
+                    </p>
+
+                    <p><label for="child">Aantal kinderen in het gezelschap:<span class="reqField">*</span><span
+                                class="element-invisible" id="childErrorHidden"></span></label><br />
+                        <input id="child" type="number" name="textfield" />
+                        <span class="errorMsg" id="childError"></span>
+                    </p>
+
+                    <p><label for="pet">Aantal huisdieren in het gezelschap:<span class="reqField">*</span><span
+                                class="element-invisible" id="petErrorHidden"></span></label><br />
+                        <input id="pet" type="number" name="textfield" />
+                        <span class="errorMsg" id="petError"></span>
+                    </p>
+
+                    <p><label for="car">Aantal auto's in het gezelschap:<span class="reqField">*</span><span
+                                class="element-invisible" id="carErrorHidden"></span></label><br />
+                        <input id="car" type="number" name="textfield" />
+                        <span class="errorMsg" id="carError"></span>
+                    </p>
+
+                    <p><label for="nmbrPlate">Kenteken(s) van de auto('s) tbv de slagboom:<span
+                                class="reqField">*</span><span class="element-invisible"
+                                id="nmbrPlateErrorHidden"></span></label><br />
+                        <input id="nmbrPlate" type="number" name="textfield" />
+                        <span class="errorMsg" id="nmbrPlateError"></span>
+                    </p>
+
+                    <fieldset>
+                        <legend id="sizeLegend">Grootte van de campingplek:<span class="reqField">*</span><span
+                                class="errorMsg" id="sizeLegendError"></span></legend>
+                        <input id="10" type="radio" name="size" value="10" checked />
+                        <label for="10">10 m2</label><br>
+                        <input id="15" type="radio" name="size" value="15">
+                        <label for="twoday">15 m2</label><br>
+                        <input id="20" type="radio" name="size" value="20">
+                        <label for="20">20 m2</label>
+                    </fieldset>
+
+                    <p><label for="arriveDate">Datumselectie van de aankomstdatum:<span class="reqField">*</span><span
+                                class="element-invisible" id="arriveDateHidden"></span></label><br />
+                        <input id="arriveDate" type="date" name="arrive-date" />
+                        <span class="errorMsg" id="arriveDateError"></span>
+                    </p>
+
+                    <p><label for="leaveDate">Datumselectie van de vertrekdatum:<span class="reqField">*</span><span
+                                class="element-invisible" id="leaveDateHidden"></span></label><br />
+                        <input id="leaveDate" type="date" name="leave-date" />
+                        <span class="errorMsg" id="leaveDateError"></span>
+                    </p>
+
+
+                    <fieldset>
+                        <legend id="electricLegend">Moet de campingplek elekticiteit hebben:<span
+                                class="reqField">*</span><span class="errorMsg" id="electricLegendError"></span>
+                        </legend>
+                        <input id="yes" type="radio" name="electric" value="yes">
+                        <label for="yes">Ja</label>
+
+                        <input id="no" type="radio" name="electric" value="no">
+                        <label for="no">Nee</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend id="waterLegend">Moet de campingplek stromend water hebben:<span
+                                class="reqField">*</span><span class="errorMsg" id="waterLegendError"></span>
+                        </legend>
+                        <input id="yes" type="radio" name="water" value="yes">
+                        <label for="yes">Ja</label>
+
+                        <input id="no" type="radio" name="water" value="no">
+                        <label for="no">Nee</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend id="facilitiesLegend">In welke faciliteiten heeft de gast interesse?:<span
+                                class="reqField">*</span><span class="errorMsg" id="facilitiesLegendError"></span>
+                        </legend>
+                        <input id="olives" type="checkbox" name="facilities" value="olives">
+                        <label for="olives">Ja</label>
+
+                        <input id="olives" type="checkbox" name="facilities" value="olives">
+                        <label for="olives">Nee</label>
+                    </fieldset>
+
+                    <!-- <div><label for="sample">Sample field with tooltip:<span class="reqField">*</span><span
+                                class="errorMsg" id="sampleError"></span></label><br />
+                        <input id="sample" type="text" name="textfield2" aria-describedby="sample-tip" />
+                        <div role="tooltip" id="sample-tip">Hint: Type anything here.</div>
+                    </div>
+
+                    <p>
+                    <fieldset>
+                        <legend id="toppingsLegend">Select your pizza toppings:<span class="reqField">*</span><span
+                                class="errorMsg" id="toppingsLegendError"></span></legend>
+                        <input id="ham" type="checkbox" name="toppings" value="ham" />
+                        <label for="ham">Ham</label><br>
+                        <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
+                        <label for="pepperoni"><span aria-label="Pepperoni, add $5.00 to price">Pepperoni,</span> <span
+                                aria-hidden="true">+ $5.00</span></label><br>
+                        <input id="mushrooms" type="checkbox" name="toppings" value="mushrooms">
+                        <label for="mushrooms">Mushrooms</label><br>
+                        <input id="olives" type="checkbox" name="toppings" value="olives">
+                        <label for="olives">Olives</label>
+                    </fieldset>
+                    </p>
+                    <fieldset>
+                        <legend id="shippingLegend">Choose a shipping method:<span class="reqField">*</span><span
+                                class="errorMsg" id="shippingLegendError"></span></legend>
+                        <input id="overnight" type="radio" name="shipping" value="overnight" checked />
+                        <label for="overnight">Overnight</label><br>
+                        <input id="twoday" type="radio" name="shipping" value="twoday">
+                        <label for="twoday">Two day</label><br>
+                        <input id="ground" type="radio" name="shipping" value="ground">
+                        <label for="ground">Ground</label>
+                    </fieldset>
+                    <label id="favcityLabel" for="favcity">Choose your favorite city?<span
+                            class="reqField">*</span><span class="errorMsg" id="favcityError"></span></label><br />
+                    <select id="favcity" name="select" aria-labelledby="favcityLabel">
+                        <option value="0">Select</option>
+                        <option value="1">Amsterdam</option>
+                        <option value="2">Buenos Aires</option>
+                        <option value="3">Delhi</option>
+                        <option value="4">Hong Kong</option>
+                        <option value="5">London</option>
+                        <option value="6">Los Angeles</option>
+                        <option value="7">Moscow</option>
+                        <option value="8">Mumbai</option>
+                        <option value="9">New York</option>
+                        <option value="10">Sao Paulo</option>
+                        <option value="11">Tokyo</option>
+                    </select> -->
+
+
+                    <div>
+                        <input class="resetButton" type="reset" name="reset" value="Reset" />
+
+                        <input class="submitButton" type="submit" name="submit" value="Submit" />
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+    </article>
+</body>
+
+
+
+</html>
