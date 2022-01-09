@@ -136,6 +136,7 @@ function validateForm() {
 	}
 
 	var n = document.forms["myForm"]["nmbrPlate"].value;
+	console.log(n);
 	if (n == "") {
 		document.getElementById("nmbrPlateErrorHidden").innerHTML = "Verplicht om om een kenteken op te geven.";
 		applyError("nmbrPlate", "&nbsp;Verplicht om een kenteken op te geven.");

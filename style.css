@@ -24,8 +24,34 @@
               padding: 4px;
               color:#333;
             }
+
             h2 {
               color: rgba(13,115,207,1);
+            }
+            h1{
+              color: rgba(13,115,207,1);
+            }
+
+            .flex-group{
+              justify-content: space-between;
+              display: flex;
+              width: 100%;
+            }
+
+            .test2{
+              width: 45%;            
+            }
+
+            .w-40{
+              width: 40%;
+            }
+
+            .w-90{
+              width: 90%;
+            }
+
+            .w-full{
+              width: 100%;
             }
 
             /* Accessible form styles end */
@@ -75,7 +101,68 @@
             input:focus + [role="tooltip"] {
                 display: block;
             }
+          
+            /* NAV */
+            nav{
+              text-align:center;
+              background-color: #c1e9d9;
+              padding-bottom: 8px;
+              padding-top: 8px;
+              margin-bottom: 10px;
+            }
+
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              text-align: center;
+              list-style: none;
+            }
             
+            li {
+              display:inline-block;
+              *display:inline; /*IE7*/
+              *zoom:1; /*IE7*/
+            }
+            
+            li a, .dropbtn {
+              display: inline-block;
+              color: black;
+              text-align: center;
+              padding: 4px 16px;
+              text-decoration: none;
+            }
+            
+            li a:hover, .dropdown:hover .dropbtn {
+              border-top: 1px solid black;  border-bottom: 1px solid black; border-width: 2px;
+            }
+            
+            li.dropdown {
+              display: inline-block;
+            }
+            
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              z-index: 1;
+            }
+            
+            .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              text-align: left;
+            }
+            
+            .dropdown-content a:hover {background-color: black; color: white;}
+            
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
             /* Reference: http://tympanus.net/codrops/2012/10/04/custom-drop-down-list-styling/ */
             
             /* GLOBALS */
@@ -88,10 +175,6 @@
                 padding: 0;
               font-family: sans-serif;
                 /*    margin: 0; */
-            }
-            
-            ::selection {
-                background: white; 
             }
             
             ::-moz-selection {
@@ -107,6 +190,10 @@
               padding: 25px;
               border-color: rgba(13,115,207,1);
               border-width: 6px;
+            }
+
+            body {
+              margin: 0px;
             }
 
             
