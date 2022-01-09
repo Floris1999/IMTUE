@@ -5,21 +5,6 @@ function validateForm() {
 	//set initial value of formValid to true
 	formValid = 1;
 	resetErrors();
-	// //validate select menu
-	// var z = document.forms["myForm"]["favcity"].value;
-	// if (z == 0) {
-	// 	applyError("favcity","&nbsp;You must choose a favorite city."); 
-	// }
-	// //validate radio buttons
-	// if(validateGroup("shipping")==false) {
-	// 	document.getElementById("shippingLegendError").style.padding = "0 5px";
-	// 	applyError("shippingLegend","Please pick a shipping method.");
-	// }
-	// //validate checkboxes
-	// if(validateGroup('toppings')==false) {
-	// 	document.getElementById("toppingsLegendError").style.padding = "0 5px";
-	// 	applyError("toppingsLegend","You must pick at least one topping.");
-	// }
 
 	//validate input fields
 	var a = document.forms["myForm"]["fname"].value;
@@ -184,17 +169,6 @@ function validateForm() {
 		document.getElementById("leaveDateHidden").innerHTML = "Verplicht om een vertrek datum op te geven.";
 		applyError("leaveDate", "&nbsp;Verplicht om een vertrek datum op te geven.");
 	}
-
-	// if (validateGroup("shipping") == false) {
-	// 	document.getElementById("shippingLegendError").style.padding = "0 5px";
-	// 	applyError("shippingLegend", "Please pick a shipping method.");
-	// }
-
-	// //validate checkboxes
-	// if (validateGroup('toppings') == false) {
-	// 	document.getElementById("toppingsLegendError").style.padding = "0 5px";
-	// 	applyError("toppingsLegend", "You must pick at least one topping.");
-	// }
 
 	//if a form field is not valid, do not submit form
 	if (formValid == 0) {

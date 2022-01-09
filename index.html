@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Accessible Form Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,700&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
@@ -12,55 +18,59 @@
 <script src="main.js"></script>
 
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">accommodaties</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">beschikbaarheid 
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"/></svg> -->
+                    </a>
+                    <div class="dropdown-content">
+                        <a class="adropdown" href="#">beschikbaarheid</a>
+                        <a class="adropdown" href="#">prijzen</a>
+                        <a class="adropdown" href="#">reserveren</a>
+                    </div>
+                </li>
+    
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">omgeving</a>
+                    <div class="dropdown-content">
+                        <a class="adropdown" href="#">Onze omgeving</a>
+                        <a class="adropdown" href="#">Tuinen</a>
+                        <a class="adropdown" href="#">Welness en golven</a>
+                    </div>
+                </li>
+    
+                <li><a href="">Contact</a></li>
+    
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">faq/vragen</a>
+                    <div class="dropdown-content">
+                        <a class="adropdown" href="#">Vragen en antwoord</a>
+                        <a class="adropdown" href="#">reviews</a>
+                        <a class="adropdown" href="#">over ons</a>
+                    </div>
+                </li>
+    
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">info</a>
+                    <div class="dropdown-content">
+                        <a class="adropdown" href="#">routes</a>
+                        <a class="adropdown" href="#">infos</a>
+                        <a class="adropdown" href="#">onze moestuin</a>
+                    </div>
+                </li>
+            </ul>
+    
+            <h1>glamping La Mirande, een droomplek in zuid Frankrijk </h1>
+        </nav>
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">accommodaties</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">beschikbaarheid</a>
-                <div class="dropdown-content">
-                    <a class="adropdown" href="#">Link 1</a>
-                    <a class="adropdown" href="#">Link 2</a>
-                    <a class="adropdown" href="#">Link 3</a>
-                </div>
-            </li>
-
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">omgeving</a>
-                <div class="dropdown-content">
-                    <a class="adropdown" href="#">Link 1</a>
-                    <a class="adropdown" href="#">Link 2</a>
-                    <a class="adropdown" href="#">Link 3</a>
-                </div>
-            </li>
-        </ul>
-
-        <li><a href="">Contact</a></li>
-
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">faq/vragen</a>
-            <div class="dropdown-content">
-                <a class="adropdown" href="#">Link 1</a>
-                <a class="adropdown" href="#">Link 2</a>
-                <a class="adropdown" href="#">Link 3</a>
-            </div>
-        </li>
-
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">info</a>
-            <div class="dropdown-content">
-                <a class="adropdown" href="#">Link 1</a>
-                <a class="adropdown" href="#">Link 2</a>
-                <a class="adropdown" href="#">Link 3</a>
-            </div>
-        </li>
-        </ul>
-
-        <h1>glamping La Mirande, een droomplek in zuid Frankrijk </h1>
-    </nav>
+    <main>
     <article id="content">
-        <div id="content-wrapper">
+        <section id="content-wrapper">
             <section>
                 <p>Bel of mail ons voor geheel vrijblijvende informatie kunt u ons mailen, bellen of onderstaand
                     boekings
@@ -75,22 +85,22 @@
                     <h1>
                         1. Persoonlijke Details
                     </h1>
-                    <div class="flex-group">
-                        <p class="test2"><label for="fname">Voornaam van de gast:<span class="reqField">*</span><span
+                    <article class="flex-group">
+                        <p class="w-40"><label for="fname">Voornaam van de gast:<span class="reqField">*</span><span
                                     class="element-invisible" id="fnameErrorHidden"></span></label><br />
                             <input id="fname" type="text" name="textfield" />
                             <span class="errorMsg" id="fnameError"></span>
-                        <p class="test2"><label for="insertion">Tussenvoegsel: (optioneel)<span
+                        <p class="w-40"><label for="insertion">Tussenvoegsel: (optioneel)<span
                                     class="element-invisible" id="insertionErrorHidden"></span></label><br />
                             <input id="insertion" type="text" name="textfield" />
                             <span class="errorMsg" id="insertionError"></span>
                         </p>
-                        <p class="test2"><label for="lname">Achternaam van de gast:<span class="reqField">*</span><span
+                        <p class="w-40"><label for="lname">Achternaam van de gast:<span class="reqField">*</span><span
                                     class="element-invisible" id="lnameErrorHidden"></span></label><br />
                             <input id="lname" type="text" name="textfield" />
                             <span class="errorMsg" id="lnameError"></span>
                         </p>
-                    </div>
+                    </article>
 
                     <fieldset>
                         <legend id="genderLegend">Geslacht van de gast tbv aanhef (man/vrouw/anders):<span
@@ -107,7 +117,7 @@
                         2. Adres
                     </h1>
 
-                    <div class="flex-group">
+                    <article class="flex-group">
                         <p class="w-full"><label for="strName">Straat:<span class="reqField">*</span><span
                                     class="element-invisible" id="strNameErrorHidden"></span></label><br />
                             <input class="w-90" id="strName" type="text" name="textfield" />
@@ -119,9 +129,9 @@
                             <input id="strNumb" type="text" name="textfield" />
                             <span class="errorMsg" id="strNumbError"></span>
                         </p>
-                    </div>
+                    </article>
 
-                    <div class="flex-group">
+                    <article class="flex-group">
                         <p class="w-full"><label for="city">Stad:<span class="reqField">*</span><span
                                     class="element-invisible" id="cityErrorHidden"></span></label><br />
                             <input class="w-90" id="city" type="text" name="textfield" />
@@ -133,13 +143,13 @@
                             <span class="errorMsg" id="postalCodeError"></span>
                         </p>
 
-                    </div>
+                    </article>
 
                     <h1>
                         3. Contact Gegevens
                     </h1>
 
-                    <div class="flex-group">
+                    <article class="flex-group">
                         <p class="w-full"><label for="phone">Telefoonnummer van de gast:<span
                                     class="reqField">*</span><span class="element-invisible"
                                     id="phoneErrorHidden"></span></label><br />
@@ -152,13 +162,13 @@
                             <input class="w-90" id="email" type="text" name="textfield" />
                             <span class="errorMsg" id="emailError"></span>
                         </p>
-                    </div>
+                    </article>
 
                     <h1>
                         4. Boeking Details
                     </h1>
 
-                    <div class="flex-group">
+                    <article class="flex-group">
                         <p class="w-full"><label for="adult">Aantal volwassenen in het gezelschap:<span
                                     class="reqField">*</span><span class="element-invisible"
                                     id="adultErrorHidden"></span></label><br />
@@ -172,9 +182,9 @@
                             <input class="w-90" id="child" type="number" name="textfield" />
                             <span class="errorMsg" id="childError"></span>
                         </p>
-                    </div>
+                    </article>
 
-                    <div class="flex-group">
+                    <article class="flex-group">
                         <p class="w-full"><label for="pet">Aantal huisdieren in het gezelschap:<span
                                     class="reqField">*</span><span class="element-invisible"
                                     id="petErrorHidden"></span></label><br />
@@ -188,7 +198,7 @@
                             <input class="w-90" id="car" type="number" name="textfield" />
                             <span class="errorMsg" id="carError"></span>
                         </p>
-                    </div>
+                    </article>
 
                     <p><label for="nmbrPlate">Kenteken(s) van de auto('s) tbv de slagboom:<span
                                 class="reqField">*</span>
@@ -264,66 +274,18 @@
                         <label for="olives">Restaurant</label>
                     </fieldset>
 
-                    <!-- <div><label for="sample">Sample field with tooltip:<span class="reqField">*</span><span
-                                class="errorMsg" id="sampleError"></span></label><br />
-                        <input id="sample" type="text" name="textfield2" aria-describedby="sample-tip" />
-                        <div role="tooltip" id="sample-tip">Hint: Type anything here.</div>
-                    </div>
-
-                    <p>
-                    <fieldset>
-                        <legend id="toppingsLegend">Select your pizza toppings:<span class="reqField">*</span><span
-                                class="errorMsg" id="toppingsLegendError"></span></legend>
-                        <input id="ham" type="checkbox" name="toppings" value="ham" />
-                        <label for="ham">Ham</label><br>
-                        <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
-                        <label for="pepperoni"><span aria-label="Pepperoni, add $5.00 to price">Pepperoni,</span> <span
-                                aria-hidden="true">+ $5.00</span></label><br>
-                        <input id="mushrooms" type="checkbox" name="toppings" value="mushrooms">
-                        <label for="mushrooms">Mushrooms</label><br>
-                        <input id="olives" type="checkbox" name="toppings" value="olives">
-                        <label for="olives">Olives</label>
-                    </fieldset>
-                    </p>
-                    <fieldset>
-                        <legend id="shippingLegend">Choose a shipping method:<span class="reqField">*</span><span
-                                class="errorMsg" id="shippingLegendError"></span></legend>
-                        <input id="overnight" type="radio" name="shipping" value="overnight" checked />
-                        <label for="overnight">Overnight</label><br>
-                        <input id="twoday" type="radio" name="shipping" value="twoday">
-                        <label for="twoday">Two day</label><br>
-                        <input id="ground" type="radio" name="shipping" value="ground">
-                        <label for="ground">Ground</label>
-                    </fieldset>
-                    <label id="favcityLabel" for="favcity">Choose your favorite city?<span
-                            class="reqField">*</span><span class="errorMsg" id="favcityError"></span></label><br />
-                    <select id="favcity" name="select" aria-labelledby="favcityLabel">
-                        <option value="0">Select</option>
-                        <option value="1">Amsterdam</option>
-                        <option value="2">Buenos Aires</option>
-                        <option value="3">Delhi</option>
-                        <option value="4">Hong Kong</option>
-                        <option value="5">London</option>
-                        <option value="6">Los Angeles</option>
-                        <option value="7">Moscow</option>
-                        <option value="8">Mumbai</option>
-                        <option value="9">New York</option>
-                        <option value="10">Sao Paulo</option>
-                        <option value="11">Tokyo</option>
-                    </select> -->
-
-
-                    <div>
+                    <article>
                         <input class="resetButton" type="reset" name="reset" value="Reset" />
 
                         <input class="submitButton" type="submit" name="submit" value="Submit" />
-                    </div>
+                    </article>
                 </form>
             </section>
 
-        </div>
+        </section>
 
     </article>
+    </main>
 </body>
 
 
